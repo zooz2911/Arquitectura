@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Digital | Arquitectura del Computador - UNETI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#portada" class="brand">
+        <span class="brand-badge">OZ</span>
+        <div class="brand-text">
+          <strong>Oscar Zambrano</strong>
+          <span>UNETI • Trayecto I</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#portada" class="active">Portada</a>
+        <a href="#autor">Autor</a>
+        <a href="#practicas">Prácticas de Laboratorio</a>
+        <a href="#reflexiones">Reflexiones Individuales</a>
+      </nav>
+
+      <button onclick="window.print()" class="btn-outline" title="Exportar o imprimir portafolio">
+        Exportar PDF ↗
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- CONTENEDOR 1: PORTADA LLAMATIVA -->
+    <section id="portada" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-info">
+          <div class="pill-tag">
+            <span class="dot"></span>
+            Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)
+          </div>
+
+          <h1 class="hero-title">
+            Portafolio Digital:<br />
+            <span class="accent-text">Arquitectura del Computador</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Recopilación estructurada de evidencias prácticas, análisis de hardware, auditoría de procesadores y reflexiones individuales correspondientes a la <strong>Sesión Didáctica 1: Fundamentos de la Arquitectura del Computador</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#practicas" class="btn-primary">Ver Prácticas de Laboratorio →</a>
+            <a href="#autor" class="btn-secondary">Perfil del Autor</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <strong>03</strong>
+              <span>Prácticas de Laboratorio</span>
+            </div>
+            <div class="stat-box">
+              <strong>SD-1</strong>
+              <span>Sesión Didáctica</span>
+            </div>
+            <div class="stat-box">
+              <strong>15%</strong>
+              <span>Ponderación Sumativa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VISUAL ALUSIVO A ARQUITECTURA DEL COMPUTADOR -->
+        <div class="hero-visual">
+          <div class="glow-orb orb-1"></div>
+          <div class="glow-orb orb-2"></div>
+
+          <div class="arch-card">
+            <div class="arch-card-header">
+              <span class="mono-label">// ARQUITECTURA_VON_NEUMANN.SYS</span>
+              <span class="status-badge">ACTIVO</span>
+            </div>
+
+            <!-- Diagrama SVG alusivo a CPU / Buses / Memoria -->
+            <svg viewBox="0 0 420 270" class="arch-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de Arquitectura del Computador">
+              <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F5B749" />
+                  <stop offset="100%" stop-color="#D97706" />
+                </linearGradient>
+                <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1A1F2E" />
+                  <stop offset="100%" stop-color="#11141D" />
+                </linearGradient>
+              </defs>
+
+              <!-- Líneas de Bus -->
+              <line x1="210" y1="75" x2="210" y2="115" stroke="#F5B749" stroke-width="2" stroke-dasharray="4 3" />
+              <line x1="120" y1="155" x2="155" y2="155" stroke="#38BDF8" stroke-width="2" />
+              <line x1="265" y1="155" x2="300" y2="155" stroke="#38BDF8" stroke-width="2" />
+              <line x1="210" y1="195" x2="210" y2="225" stroke="#A78BFA" stroke-width="2" />
+
+              <!-- Bloque Superior: Memoria Principal -->
+              <rect x="115" y="20" width="190" height="55" rx="10" fill="url(#cardGrad)" stroke="#2E3548" stroke-width="1.5" />
+              <text x="210" y="44" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">JERARQUÍA DE MEMORIA</text>
+              <text x="210" y="61" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="JetBrains Mono, monospace">Registros • Caché L1/L2/L3 • RAM</text>
+
+              <!-- Bloque Izquierdo: Entrada -->
+              <rect x="18" y="125" width="102" height="60" rx="10" fill="url(#cardGrad)" stroke="#2E3548" stroke-width="1.5" />
+              <text x="69" y="152" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">ENTRADA</text>
+              <text x="69" y="168" text-anchor="middle" fill="#94A3B8" font-size="9.5" font-family="JetBrains Mono, monospace">Periféricos I/O</text>
+
+              <!-- Bloque Central: CPU -->
+              <rect x="155" y="115" width="110" height="80" rx="12" fill="url(#cardGrad)" stroke="url(#goldGrad)" stroke-width="2.2" />
+              <text x="210" y="143" text-anchor="middle" fill="#F5B749" font-size="13" font-weight="800" font-family="Plus Jakarta Sans, sans-serif">CPU</text>
+              <text x="210" y="160" text-anchor="middle" fill="#E2E8F0" font-size="9.5" font-family="JetBrains Mono, monospace">UC • ALU • Registros</text>
+              <text x="210" y="176" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="JetBrains Mono, monospace">Fetch-Decode-Execute</text>
+
+              <!-- Bloque Derecho: Salida -->
+              <rect x="300" y="125" width="102" height="60" rx="10" fill="url(#cardGrad)" stroke="#2E3548" stroke-width="1.5" />
+              <text x="351" y="152" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">SALIDA</text>
+              <text x="351" y="168" text-anchor="middle" fill="#94A3B8" font-size="9.5" font-family="JetBrains Mono, monospace">Resultados / Display</text>
+
+              <!-- Bloque Inferior: Buses del Sistema -->
+              <rect x="85" y="222" width="250" height="36" rx="8" fill="#161B26" stroke="#A78BFA" stroke-width="1.2" />
+              <text x="210" y="244" text-anchor="middle" fill="#C4B5FD" font-size="10" font-weight="600" font-family="JetBrains Mono, monospace">BUS DE DATOS • DIRECCIONES • CONTROL</text>
+            </svg>
+
+            <div class="floating-chip chip-top">
+              <span>Unidad Curricular</span>
+              <strong>Arquitectura del Computador</strong>
+            </div>
+            <div class="floating-chip chip-bottom">
+              <span>Institución</span>
+              <strong>UNETI • Venezuela</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENEDOR 2: AUTOR -->
+    <section id="autor" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">• IDENTIFICACIÓN DEL PARTICIPANTE</span>
+          <h2>Autor del Portafolio</h2>
+        </div>
+
+        <div class="author-container">
+          <!-- Marco para fotografía profesional -->
+          <div class="author-photo-card">
+            <div class="photo-frame">
+              <img
+                src="assets/img/autor.jepg"
+                alt="Fotografía profesional de Oscar Yván Zambrano Avendaño"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <strong>Fotografía Profesional del Autor</strong>
+                <small>Guarda tu foto formal como <code>assets/img/autor.jpg</code></small>
+              </div>
+            </div>
+            <div class="author-id-badge">
+              <span>Cédula de Identidad</span>
+              <strong>V-31.269.474</strong>
+            </div>
+          </div>
+
+          <!-- Presentación del participante -->
+          <div class="author-details">
+            <div class="author-headline">
+              <h3>Oscar Yván Zambrano Avendaño</h3>
+              <p class="role-tag">Estudiante de Ingeniería Informática (UNETI) • Analista de Soporte TI y Desarrollo</p>
+            </div>
+
+            <p class="author-bio">
+              Soy estudiante del Trayecto I de <strong>Ingeniería Informática</strong> en la <strong>Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)</strong> y Técnico Medio en Informática. Me desempeño en el área de soporte técnico de infraestructura, administración de sistemas, virtualización y desarrollo de aplicaciones web.
+            </p>
+            <p class="author-bio">
+              Este portafolio digital documenta de forma rigurosa el desarrollo práctico y el análisis crítico de los fundamentos de la arquitectura de computadores, abarcando desde la evolución hacia paradigmas emergentes hasta el diagnóstico real de microprocesadores y herramientas de mantenimiento.
+            </p>
+
+            <div class="expertise-grid">
+              <div class="mini-card">
+                <span class="mini-icon">⚙️</span>
+                <div>
+                  <strong>Hardware y Diagnóstico</strong>
+                  <p>Ensamblaje, mantenimiento preventivo y auditoría de componentes.</p>
+                </div>
+              </div>
+              <div class="mini-card">
+                <span class="mini-icon">🖥️</span>
+                <div>
+                  <strong>Sistemas y Virtualización</strong>
+                  <p>Administración Windows/Linux, servidores y monitoreo.</p>
+                </div>
+              </div>
+              <div class="mini-card">
+                <span class="mini-icon">💻</span>
+                <div>
+                  <strong>Desarrollo Web</strong>
+                  <p>Construcción de soluciones estructuradas con HTML, CSS, JS y PHP.</p>
+                </div>
+              </div>
+              <div class="mini-card">
+                <span class="mini-icon">🎓</span>
+                <div>
+                  <strong>Formación UNETI</strong>
+                  <p>Trayecto I • Unidad Curricular: Arquitectura del Computador.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENEDOR 3: PRÁCTICAS DE LABORATORIO -->
+    <section id="practicas" class="section">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="eyebrow">• LABORATORIO DE ARQUITECTURA DEL COMPUTADOR</span>
+            <h2>Desarrollo de Actividades Prácticas</h2>
+          </div>
+          <p class="section-desc">
+            Evidencias desarrolladas en la Sesión Didáctica 1 con su respectiva fecha de creación y publicación.
+          </p>
+        </div>
+
+        <!-- TARJETAS RESUMEN DE LAS 3 PRÁCTICAS -->
+        <div class="cards-overview-grid">
+          <a href="#practica-1" class="overview-card">
+            <div class="card-top-meta">
+              <span class="badge-num">PRÁCTICA 01</span>
+              <span class="date-tag">📅 20 Nov 2026</span>
+            </div>
+            <h3>Futuro de la Ingeniería en Informática</h3>
+            <p>Ensayo crítico de 1 cuartilla (25 líneas) sobre computación cuántica y nuevas arquitecturas de procesamiento.</p>
+            <div class="tag-row">
+              <span>Ensayo Crítico</span>
+              <span>Computación Cuántica</span>
+            </div>
+          </a>
+
+          <a href="#practica-2" class="overview-card">
+            <div class="card-top-meta">
+              <span class="badge-num">PRÁCTICA 02</span>
+              <span class="date-tag">📅 21 Nov 2026</span>
+            </div>
+            <h3>Identificación de la CPU</h3>
+            <p>Auditoría técnica a nivel de software de 3 computadores reales, zócalos, cuidados y evidencia fotográfica.</p>
+            <div class="tag-row">
+              <span>Tabla Comparativa</span>
+              <span>Zócalos</span>
+              <span>3 Equipos</span>
+            </div>
+          </a>
+
+          <a href="#practica-3" class="overview-card">
+            <div class="card-top-meta">
+              <span class="badge-num">PRÁCTICA 03</span>
+              <span class="date-tag">📅 21 Nov 2026</span>
+            </div>
+            <h3>Herramientas de Arquitectura</h3>
+            <p>Clasificación ilustrada de herramientas esenciales de hardware y software para mantenimiento y diagnóstico.</p>
+            <div class="tag-row">
+              <span>Hardware</span>
+              <span>Software</span>
+              <span>Tabla Técnica</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- =========================================================
+             CONTENEDOR DETALLADO: PRÁCTICA 1 (ENSAYO 25 LÍNEAS)
+             ========================================================= -->
+        <article id="practica-1" class="practice-container">
+          <div class="practice-header">
+            <div>
+              <span class="practice-kicker">PRÁCTICA DE LABORATORIO 01 • ENSAYO CRÍTICO</span>
+              <h3>Del Silicio al Qubit: El Horizonte de la Ingeniería en Informática ante las Nuevas Arquitecturas</h3>
+            </div>
+            <div class="practice-meta">
+              <span><strong>Fecha de creación:</strong> 20 de noviembre de 2026</span>
+              <span><strong>Extensión:</strong> 1 cuartilla (25 líneas)</span>
+            </div>
+          </div>
+
+          <div class="essay-paper">
+            <p class="essay-line">01. Durante décadas, el progreso de la ingeniería en informática estuvo marcado por la Ley de Moore y la miniaturización</p>
+            <p class="essay-line">02. constante de los transistores de silicio dentro de la clásica arquitectura Von Neumann. Sin embargo, al aproximarnos</p>
+            <p class="essay-line">03. a los límites físicos de escala atómica, fenómenos como el efecto túnel cuántico y la disipación térmica han frenado</p>
+            <p class="essay-line">04. el incremento tradicional de frecuencias de reloj, obligando a replantear cómo diseñamos y programamos sistemas.</p>
+            <p class="essay-line">05. En este escenario de transición tecnológica, el futuro de nuestra disciplina deja de depender únicamente del software</p>
+            <p class="essay-line">06. abstracto para exigir una comprensión profunda del hardware heterogéneo y de los nuevos paradigmas de cómputo.</p>
+            <p class="essay-line">07. La computación cuántica emerge como uno de los pilares más disruptivos al sustituir el bit binario por el qubit,</p>
+            <p class="essay-line">08. aprovechando principios de superposición y entrelazamiento para evaluar múltiples estados de manera simultánea.</p>
+            <p class="essay-line">09. Algoritmos como el de Grover para búsqueda no estructurada y el de Shor para factorización demuestran que tareas</p>
+            <p class="essay-line">10. intratables para procesadores clásicos pueden resolverse en tiempos exponencialmente menores, transformando áreas</p>
+            <p class="essay-line">11. críticas como la criptografía post-cuántica, la simulación molecular, la logística compleja y la inteligencia artificial.</p>
+            <p class="essay-line">12. Paralelamente, las arquitecturas neuromórficas imitan la estructura sináptica del cerebro humano mediante redes de</p>
+            <p class="essay-line">13. neuronas artificiales en hardware, reduciendo drásticamente el cuello de botella entre memoria y procesamiento.</p>
+            <p class="essay-line">14. A esto se suma el auge de aceleradores especializados como las NPU, TPU y diseños basados en chiplets e instrucciones</p>
+            <p class="essay-line">15. abiertas como RISC-V, que permiten adaptar la arquitectura del computador a cargas de trabajo específicas con alta</p>
+            <p class="essay-line">16. eficiencia energética. Para el ingeniero en informática del mañana, estos avances significan que ya no bastará con</p>
+            <p class="essay-line">17. dominar lenguajes de alto nivel sin considerar la jerarquía de memoria, el paralelismo masivo o la latencia de buses.</p>
+            <p class="essay-line">18. Será indispensable diseñar algoritmos híbridos capaces de orquestar CPU tradicionales junto a coprocesadores</p>
+            <p class="essay-line">19. cuánticos en la nube y unidades tensoriales locales. Asimismo, surgirán retos éticos y de seguridad informática sin</p>
+            <p class="essay-line">20. precedentes, pues la capacidad de romper esquemas actuales de cifrado exigirá migrar toda la infraestructura global</p>
+            <p class="essay-line">21. hacia protocolos resistentes a ataques cuánticos antes de que dicha potencia de cálculo se vuelva de uso cotidiano.</p>
+            <p class="essay-line">22. En conclusión, la ingeniería en informática se dirige hacia una etapa de convergencia profunda entre física, electrónica</p>
+            <p class="essay-line">23. y ciencias de la computación, donde comprender la arquitectura interna del computador no es un requisito histórico,</p>
+            <p class="essay-line">24. sino la llave maestra para innovar, optimizar recursos y construir soluciones tecnológicas sostenibles en una era</p>
+            <p class="essay-line">25. donde el procesamiento de la información trasciende definitivamente las fronteras del transistor convencional.</p>
+          </div>
+        </article>
+
+        <!-- =========================================================
+             CONTENEDOR DETALLADO: PRÁCTICA 2 (IDENTIFICACIÓN DE LA CPU)
+             ========================================================= -->
+        <article id="practica-2" class="practice-container">
+          <div class="practice-header">
+            <div>
+              <span class="practice-kicker">PRÁCTICA DE LABORATORIO 02 • AUDITORÍA DE HARDWARE</span>
+              <h3>Identificación de la CPU, Especificaciones Técnicas y Cuidados</h3>
+            </div>
+            <div class="practice-meta">
+              <span><strong>Fecha de creación:</strong> 21 de noviembre de 2026</span>
+              <span><strong>Herramienta de diagnóstico:</strong> CPU-Z / Información del Sistema (msinfo32)</span>
+            </div>
+          </div>
+
+          <p class="practice-intro">
+            Se realizó la inspección a nivel de software de tres (3) equipos de cómputo distintos para identificar la marca, modelo exacto, generación, arquitectura, características internas y tipo de zócalo (socket) de cada unidad central de procesamiento.
+          </p>
+
+          <!-- Tabla Comparativa de CPUs -->
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Parámetro Técnico</th>
+                  <th>Equipo 1 (Desktop Oficina)</th>
+                  <th>Equipo 2 (Estación Trabajo)</th>
+                  <th>Equipo 3 (Portátil Personal)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Marca</strong></td>
+                  <td>Intel</td>
+                  <td>Intel</td>
+                  <td>Intel</td>
+                </tr>
+                <tr>
+                  <td><strong>Modelo Exacto</strong></td>
+                  <td>Core i5-2400</td>
+                  <td>Core i5-6500 (ThinkCentre M800)</td>
+                  <td>Core i7-7500U</td>
+                </tr>
+                <tr>
+                  <td><strong>Generación y Microarquitectura</strong></td>
+                  <td>2.ª Generación (Sandy Bridge)</td>
+                  <td>6.ª Generación (Skylake)</td>
+                  <td>7.ª Generación (Kaby Lake)</td>
+                </tr>
+                <tr>
+                  <td><strong>Tipo de Zócalo (Socket)</strong></td>
+                  <td><code>LGA 1155</code> (Socket H2)</td>
+                  <td><code>LGA 1151</code> (Socket H4)</td>
+                  <td><code>FCBGA 1356</code> (Soldado en placa)</td>
+                </tr>
+                <tr>
+                  <td><strong>Núcleos / Hilos</strong></td>
+                  <td>4 Núcleos / 4 Hilos</td>
+                  <td>4 Núcleos / 4 Hilos</td>
+                  <td>2 Núcleos / 4 Hilos (Hyper-Threading)</td>
+                </tr>
+                <tr>
+                  <td><strong>Frecuencia Base / Turbo</strong></td>
+                  <td>3.10 GHz / 3.40 GHz</td>
+                  <td>3.20 GHz / 3.60 GHz</td>
+                  <td>2.70 GHz / 3.50 GHz</td>
+                </tr>
+                <tr>
+                  <td><strong>Memoria Caché y Litografía</strong></td>
+                  <td>6 MB Intel Smart Cache • 32 nm</td>
+                  <td>6 MB Intel Smart Cache • 14 nm</td>
+                  <td>4 MB Intel Smart Cache • 14 nm</td>
+                </tr>
+                <tr>
+                  <td><strong>TDP y Soporte de Memoria</strong></td>
+                  <td>95 W • DDR3-1066/1333</td>
+                  <td>65 W • DDR4-1866/2133 / DDR3L</td>
+                  <td>15 W (Bajo consumo) • DDR4-2133</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Recomendaciones de Uso y Cuidado -->
+          <div class="care-grid">
+            <div class="care-card">
+              <h4>🛡️ Recomendaciones de Uso y Cuidado — Equipo 1 (Core i5-2400)</h4>
+              <ul>
+                <li>Al tener un TDP alto (95 W) y litografía de 32 nm, requiere renovación de pasta térmica cada 12 meses y limpieza periódica del disipador de aluminio.</li>
+                <li>Evitar cargas sostenidas al 100% sin flujo de aire adecuado en el chasis y proteger el equipo con regulador de voltaje o UPS.</li>
+              </ul>
+            </div>
+            <div class="care-card">
+              <h4>🛡️ Recomendaciones de Uso y Cuidado — Equipo 2 (Core i5-6500)</h4>
+              <ul>
+                <li>Mantener libres las rejillas frontales y traseras del chasis compacto (SFF) para no comprometer la ventilación del zócalo LGA 1151.</li>
+                <li>Al manipular el procesador durante mantenimiento, evitar tocar los contactos dorados inferiores o doblar los pines de la tarjeta madre.</li>
+              </ul>
+            </div>
+            <div class="care-card">
+              <h4>🛡️ Recomendaciones de Uso y Cuidado — Equipo 3 (Core i7-7500U)</h4>
+              <ul>
+                <li>Utilizar el portátil sobre superficies rígidas y planas (nunca sobre camas o telas) para no obstruir la toma de aire inferior del disipador.</li>
+                <li>Configurar perfiles de energía equilibrados cuando opere con batería y limpiar el ventilador interno con aire comprimido cada 6 a 8 meses.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Evidencia Fotográfica del Estudiante con cada Equipo -->
+          <h4 class="sub-heading">Evidencia Fotográfica con los Equipos Auditados</h4>
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <div class="evidence-img-box">
+                <img src="assets/img/equipo1.jpg" alt="Oscar Zambrano con Equipo 1 Intel Core i5-2400" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="photo-placeholder small">
+                  <span>📸 Equipo 1</span>
+                  <small>Coloca tu foto en <code>assets/img/equipo1.jpg</code></small>
+                </div>
+              </div>
+              <div class="evidence-caption">
+                <strong>Equipo 1: Intel Core i5-2400 (LGA 1155)</strong>
+                <span>Identificación mediante CPU-Z y propiedades del sistema.</span>
+              </div>
+            </div>
+
+            <div class="evidence-card">
+              <div class="evidence-img-box">
+                <img src="assets/img/equipo2.jpg" alt="Oscar Zambrano con Equipo 2 Intel Core i5-6500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="photo-placeholder small">
+                  <span>📸 Equipo 2</span>
+                  <small>Coloca tu foto en <code>assets/img/equipo2.jpg</code></small>
+                </div>
+              </div>
+              <div class="evidence-caption">
+                <strong>Equipo 2: Intel Core i5-6500 (LGA 1151)</strong>
+                <span>Verificación de arquitectura Skylake y parámetros térmicos.</span>
+              </div>
+            </div>
+
+            <div class="evidence-card">
+              <div class="evidence-img-box">
+                <img src="assets/img/equipo3.jpg" alt="Oscar Zambrano con Equipo 3 Intel Core i7-7500U" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="photo-placeholder small">
+                  <span>📸 Equipo 3</span>
+                  <small>Coloca tu foto en <code>assets/img/equipo3.jpg</code></small>
+                </div>
+              </div>
+              <div class="evidence-caption">
+                <strong>Equipo 3: Intel Core i7-7500U (FCBGA 1356)</strong>
+                <span>Auditoría de procesador móvil de bajo consumo (15 W).</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================
+             CONTENEDOR DETALLADO: PRÁCTICA 3 (HERRAMIENTAS)
+             ========================================================= -->
+        <article id="practica-3" class="practice-container">
+          <div class="practice-header">
+            <div>
+              <span class="practice-kicker">PRÁCTICA DE LABORATORIO 03 • HARDWARE Y SOFTWARE</span>
+              <h3>Herramientas Utilizadas en Arquitectura del Computador</h3>
+            </div>
+            <div class="practice-meta">
+              <span><strong>Fecha de creación:</strong> 21 de noviembre de 2026</span>
+              <span><strong>Categorías:</strong> Instrumentación Física y Software de Diagnóstico</span>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="data-table tools-table">
+              <thead>
+                <tr>
+                  <th>Imagen / Representación</th>
+                  <th>Nombre de la Herramienta</th>
+                  <th>Categoría</th>
+                  <th>Aplicación Técnica en Arquitectura del Computador</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">🪛</div>
+                  </td>
+                  <td><strong>Juego de Destornilladores de Precisión (Phillips y Torx)</strong></td>
+                  <td><span class="cat-pill hw">Hardware</span></td>
+                  <td>Apertura segura de chasis, fijación de tarjetas madre, fuentes de poder, unidades de almacenamiento y disipadores sin dañar los cabezales de tornillería.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">⚡</div>
+                  </td>
+                  <td><strong>Pulsera Antiestática (ESD)</strong></td>
+                  <td><span class="cat-pill hw">Hardware</span></td>
+                  <td>Descarga a tierra de la electricidad estática acumulada en el cuerpo humano para evitar daños irreversibles en circuitos integrados, memorias RAM y microprocesadores.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">🌡️</div>
+                  </td>
+                  <td><strong>Pasta Térmica y Alcohol Isopropílico</strong></td>
+                  <td><span class="cat-pill hw">Hardware</span></td>
+                  <td>Limpieza de residuos térmicos antiguos y mejora de la conductividad calorífica entre el encapsulado de la CPU/GPU y la base del disipador.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">📟</div>
+                  </td>
+                  <td><strong>Multímetro Digital</strong></td>
+                  <td><span class="cat-pill hw">Hardware</span></td>
+                  <td>Medición de voltajes continuos (+12V, +5V, +3.3V) en fuentes de alimentación ATX, comprobación de continuidad en pistas y estado de baterías CMOS.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">🌬️</div>
+                  </td>
+                  <td><strong>Sopladora Eléctrica / Aire Comprimido y Brocha Antiestática</strong></td>
+                  <td><span class="cat-pill hw">Hardware</span></td>
+                  <td>Remoción de polvo acumulado en ranuras PCIe, bancos DIMM, aletas de disipación y ventiladores durante el mantenimiento preventivo.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">🧠</div>
+                  </td>
+                  <td><strong>CPU-Z / HWiNFO64</strong></td>
+                  <td><span class="cat-pill sw">Software</span></td>
+                  <td>Identificación detallada de microarquitectura, zócalo, multiplicadores, niveles de memoria caché, frecuencias en tiempo real y sensores térmicos.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">🧪</div>
+                  </td>
+                  <td><strong>MemTest86</strong></td>
+                  <td><span class="cat-pill sw">Software</span></td>
+                  <td>Ejecución de patrones de escritura y lectura exhaustivos sobre los módulos de memoria RAM desde arranque externo para detectar celdas defectuosas.</td>
+                </tr>
+                <tr>
+                  <td class="tool-visual-cell">
+                    <div class="tool-badge-icon">💾</div>
+                  </td>
+                  <td><strong>CrystalDiskInfo</strong></td>
+                  <td><span class="cat-pill sw">Software</span></td>
+                  <td>Lectura de atributos S.M.A.R.T., temperatura, horas de encendido y estado de salud de unidades de almacenamiento SSD (NVMe/SATA) y HDD.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTENEDOR 4: REFLEXIONES DE APRENDIZAJE INDIVIDUAL -->
+    <section id="reflexiones" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">• EVALUACIÓN METACOGNITIVA INDIVIDUAL</span>
+          <h2>Reflexiones de Aprendizaje por Actividad</h2>
+        </div>
+
+        <div class="reflections-grid">
+          <!-- Reflexión 1 -->
+          <div class="reflection-card">
+            <div class="ref-header">
+              <span class="badge-num">REFLEXIÓN • PRÁCTICA 01</span>
+              <span class="date-tag">20 Nov 2026</span>
+            </div>
+            <h3>Futuro de la Ingeniería en Informática</h3>
+            <p>
+              Al redactar este ensayo comprendí que el estudio de la arquitectura del computador no se limita a conocer componentes históricos, sino que constituye la base para entender hacia dónde evoluciona la industria tecnológica. Analizar los límites físicos del silicio y el funcionamiento de los qubits me permitió visualizar cómo el software del futuro deberá diseñarse pensando en modelos híbridos, paralelismo y eficiencia energética.
+            </p>
+          </div>
+
+          <!-- Reflexión 2 -->
+          <div class="reflection-card">
+            <div class="ref-header">
+              <span class="badge-num">REFLEXIÓN • PRÁCTICA 02</span>
+              <span class="date-tag">21 Nov 2026</span>
+            </div>
+            <h3>Identificación de la CPU</h3>
+            <p>
+              Comparar tres procesadores de distintas generaciones y segmentos (escritorio y portátil) me ayudó a relacionar las especificaciones teóricas con el rendimiento real de un equipo. Pude comprobar cómo la evolución de la litografía (de 32 nm a 14 nm), el tipo de zócalo (LGA frente a BGA soldado) y el TDP determinan tanto las capacidades de actualización de hardware como las medidas de mantenimiento preventivo necesarias para prolongar su vida útil.
+            </p>
+          </div>
+
+          <!-- Reflexión 3 -->
+          <div class="reflection-card">
+            <div class="ref-header">
+              <span class="badge-num">REFLEXIÓN • PRÁCTICA 03</span>
+              <span class="date-tag">21 Nov 2026</span>
+            </div>
+            <h3>Herramientas de Hardware y Software</h3>
+            <p>
+              Esta práctica reforzó la importancia de combinar adecuadamente la instrumentación física con el software de diagnóstico. Entendí que intervenir un computador sin protección antiestática o sin herramientas de precisión pone en riesgo componentes sensibles, mientras que apoyarse en utilidades como CPU-Z, MemTest86 y CrystalDiskInfo permite diagnosticar fallas con exactitud antes de realizar cualquier sustitución física.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER FINAL / PIE DE PORTAFOLIO -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <span class="eyebrow">• PORTAFOLIO DIGITAL ACADÉMICO • 2026</span>
+            <h2>Arquitectura del Computador — UNETI</h2>
+            <p>
+              Elaborado por <strong>Oscar Yván Zambrano Avendaño</strong> (C.I. 31.269.474) • Sesión Didáctica 1.
+            </p>
+          </div>
+          <a href="#portada" class="btn-primary">Volver arriba ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="brand">
+        <span class="brand-badge">OZ</span>
+        <span>Oscar Yván Zambrano Avendaño • C.I. 31269474</span>
+      </div>
+      <p>UNETI • Trayecto I • Arquitectura del Computador (Sesión Didáctica 1)</p>
+    </div>
+  </footer>
+
+</body>
+</html>
